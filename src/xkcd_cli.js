@@ -188,8 +188,8 @@ function linkFile(url) {
 
 Filesystem = {
 	'welcome.txt': {type:'file', read:function(terminal) {
-		terminal.print($('<h4>').text('Welcome to the unixkcd console.'));
-		terminal.print('To navigate the comics, enter "next", "prev", "first", "last", "display", or "random".');
+		terminal.print($('<h4>').text('Welcome to the fdzh console.'));
+		terminal.print('Hi Fedora!');
 		terminal.print('Use "ls", "cat", and "cd" to navigate the filesystem.');
 	}},
 	'license.txt': {type:'file', read:function(terminal) {
@@ -215,10 +215,11 @@ Filesystem = {
 		});
 	}}
 };
-Filesystem['blog'] = Filesystem['blag'] = linkFile('http://blag.xkcd.com');
-Filesystem['forums'] = Filesystem['fora'] = linkFile('http://forums.xkcd.com/');
-Filesystem['store'] = linkFile('http://store.xkcd.com/');
-Filesystem['about'] = linkFile('http://xkcd.com/about/');
+Filesystem['news'] = Filesystem['news'] = linkFile('https://news.fdzh.org');
+Filesystem['star'] = Filesystem['star'] = linkFile('http://star.fdzh.org');
+Filesystem['planet'] = linkFile('http://p.fdzh.org/');
+Filesystem['paste'] = linkFile('http://s.fdzh.org');
+Filesystem['url'] = linkFile('http://fdzh.ga');
 TerminalShell.pwd = Filesystem;
 
 TerminalShell.commands['cd'] = function(terminal, path) {
